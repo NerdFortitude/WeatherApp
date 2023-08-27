@@ -9,6 +9,8 @@ const searchForm = document.querySelector("[data-searchForm]");
 const loadingScreen = document.querySelector(".loading-container");
 const userInfoContainer = document.querySelector(".user-info-container");
 const errorContainer = document.querySelector(".error-container");
+const wrapper = document.querySelector(".wrapper");
+
 
 //variables
 let currentTab = userTab;
@@ -116,7 +118,6 @@ function renderWeatherInfo(weatherInfo){
     // clouds
 
     //firstly we have to fecth the elements 
-    console.log(weatherInfo)
     const cityName = document.querySelector("[data-cityName]");
     const countryIcon = document.querySelector("[data-countryIcon]");
     const description = document.querySelector("[data-weatherDesc]");
@@ -125,8 +126,9 @@ function renderWeatherInfo(weatherInfo){
     const windspeed =  document.querySelector("[data-windspeed]");
     const humidity = document.querySelector("[data-humidity]");
     const cloudiness = document.querySelector("[data-cloudiness]");
-    const wrapper = document.querySelector(".wrapper");
-    // wrapper.style.backgroundImage = `url("https://api.unsplash.com/search/photos?page=1&query=weather")`;
+    
+
+    //  fetchRenderImage(description,cityName);
 
 
 
@@ -200,7 +202,6 @@ async function fetchSearchWeatherInfo(city){
             loadingScreen.classList.remove("active");
             userInfoContainer.classList.remove("active");
             errorContainer.classList.add("active");
-            console.log(errorContainer.classList);
             
           }
           else{
@@ -216,3 +217,18 @@ async function fetchSearchWeatherInfo(city){
     }
 }
 
+
+
+
+
+// async function fetchRenderImage(description,cityName){
+    
+//     const response = await fetch(`https://pixabay.com/api/?key=19998340-8914d01fb930bc850ec5dc281&q=${cityName.innerText}&image_type=photo`);
+//     const data = await response.json();
+
+//     wrapper.style.backgroundImage = `url('${data?.hits?.[0]?.largeImageURL}')`;
+//     wrapper.style.backgroundRepeat = "no-repeat";
+//     wrapper.style.backgroundSize = "cover";
+
+//     console.log(data);
+// }

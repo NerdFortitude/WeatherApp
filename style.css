@@ -26,7 +26,9 @@
 h1{
      text-align: center;
      text-transform: uppercase;
-     padding-top: 20px;
+     /* padding-top: 20px; */
+     color: black;
+     font-weight: bold;
 }
 
 .tab-container{
@@ -300,4 +302,43 @@ h1{
    .error-container p{
      align-items: center;
      font-size: 2rem;
+   }
+
+   .nav{
+     margin:0 auto;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+     align-items: center;
+     height: 5rem;
+     width: 100%;
+     background-color: black;
+     /* border-radius: 16px; */
+     padding: 0.5rem;
+     position:relative;
+     background-color: white;
+     /* position: absolute;
+     top: 6px; */
+     
+   }
+
+   
+   .logo{
+     height: 35px;
+     width: 35px;
+
+   }
+
+   .theme{
+     font-size: 25px;
+   }
+
+   @media only screen and (max-width: 281px) {
+     h1{
+          font-size: medium;
+
+     }
+     .nav{
+          height: 50px;
+     }
    }
