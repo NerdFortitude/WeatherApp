@@ -15,8 +15,17 @@
 }
 
 
-body{
-     /* background-color: #5eb8d6; */
+.content-wrapper{
+     background-color: rgba(255, 255, 255, 0.341);
+     width: 85%;
+     margin: 0 auto;
+     padding: 0.2rem;
+     margin-top:0.5rem;
+     border-radius: 20px;
+}
+
+.content-wrapper.dark{
+     background-color: rgba(0, 0, 0, 0.341);
 }
 .wrapper{
      width:100vw;
@@ -276,10 +285,15 @@ h1{
        background-color: lightblue;
      }
 
+     .content-wrapper{
+          height: 100vh;
+     }
+
      .parameter-container{
           /* position: absolute; */
           width: 100vw;
           gap: 5px;
+          height: 23vh;
           margin-top: 0.5rem;
           display: flex;
           flex-wrap: wrap;
@@ -329,8 +343,8 @@ h1{
      height: 5rem;
      width: 100%;
      padding: 0.5rem;
-     position:relative;
-     background-color: rgba(255, 255, 255, 0.481);
+     /* position:relative; */
+     /* background-color: rgba(255, 255, 255, 0.481); */
    
      
    }

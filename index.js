@@ -11,12 +11,14 @@ const errorContainer = document.querySelector(".error-container");
 const wrapper = document.querySelector(".wrapper");
 const theme  = document.querySelector(".theme");
 const h1 = document.querySelector("h1");
+const contentWrapper = document.querySelector(".content-wrapper");
 
 let isdark = true;
 theme.addEventListener("click",(e)=>{
     console.log("Hello");
     wrapper.classList.toggle("dark");
     h1.classList.toggle("dark");
+    contentWrapper.classList.toggle("dark");
 
     if(isdark){
         theme.innerText = "🔆";
