@@ -4,13 +4,29 @@ const userTab = document.querySelector("[data-userWeather]");
 const searchTab = document.querySelector("[data-searchWeather]");
 const userContainer = document.querySelector(".weather-container");
 const grantAccessContainer = document.querySelector(".grant-location-container");
-// const grantAcessContainer = document.querySelector(".grant-location-container");
 const searchForm = document.querySelector("[data-searchForm]");
 const loadingScreen = document.querySelector(".loading-container");
 const userInfoContainer = document.querySelector(".user-info-container");
 const errorContainer = document.querySelector(".error-container");
 const wrapper = document.querySelector(".wrapper");
+const theme  = document.querySelector(".theme");
+const h1 = document.querySelector("h1");
 
+let isdark = true;
+theme.addEventListener("click",(e)=>{
+    console.log("Hello");
+    wrapper.classList.toggle("dark");
+    h1.classList.toggle("dark");
+
+    if(isdark){
+        theme.innerText = "🔆";
+        isdark = false;
+    }
+    else{
+        theme.innerText = "🌙";
+        isdark = true;
+    }
+})
 
 //variables
 let currentTab = userTab;
@@ -232,3 +248,4 @@ async function fetchSearchWeatherInfo(city){
 
 //     console.log(data);
 // }
+

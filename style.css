@@ -10,7 +10,7 @@
 :root{
      --colorDark1:#11204E;
      --colorDark2:#3F72AF;
-     --colorLight1:#DBE2EF;
+     --colorLight1:#1d2128;
      --colorLight2:#F9F7F7;
 }
 
@@ -18,8 +18,17 @@
 .wrapper{
      width:100vw;
      height: 100vh;
-     color:var(--colorLight2);
-     background-image: linear-gradient(160deg,#112d4e 0%,#3f72af,#3f72af 100%);
+     color:var(--colorLight1);
+     background-color: #5eb8d6;
+     transition: all 0.5s linear ;
+
+}
+
+
+.wrapper.dark{
+     background-image: none;
+     background-color: #0e1835;
+     color: var(--colorLight2);
 }
 
 
@@ -312,13 +321,10 @@ h1{
      align-items: center;
      height: 5rem;
      width: 100%;
-     background-color: black;
-     /* border-radius: 16px; */
      padding: 0.5rem;
      position:relative;
-     background-color: white;
-     /* position: absolute;
-     top: 6px; */
+     background-color: rgba(255, 255, 255, 0.481);
+   
      
    }
 
@@ -330,7 +336,7 @@ h1{
    }
 
    .theme{
-     font-size: 25px;
+     font-size: 35px;
    }
 
    @media only screen and (max-width: 281px) {
@@ -342,3 +348,9 @@ h1{
           height: 50px;
      }
    }
+
+
+h1.dark{
+     color: white;
+}
+   
