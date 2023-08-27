@@ -15,12 +15,16 @@
 }
 
 
+body{
+     /* background-color: #5eb8d6; */
+}
 .wrapper{
      width:100vw;
-     height: fit-content;
+     height: 100vh;
      color:var(--colorLight1);
      background-color: #5eb8d6;
      transition: all 0.5s linear ;
+     overflow: auto;
 
 
 }
@@ -267,7 +271,7 @@ h1{
      outline:3px solid white;
 }
 
-@media only screen and (max-width: 376px) {
+@media only screen and (max-width: 413px) {
      body {
        background-color: lightblue;
      }
@@ -275,11 +279,13 @@ h1{
      .parameter-container{
           /* position: absolute; */
           width: 100vw;
-          gap: 10px;
+          gap: 5px;
           margin-top: 0.5rem;
+          display: flex;
+          flex-wrap: wrap;
      }
      .parameter{
-          width: 25%;
+          width: 26%;
      }
      .parameter p{
           font-size: 0.75rem;
@@ -290,7 +296,7 @@ h1{
      }
 
      .tab-container{
-          margin-top: 1rem;
+          margin-top: 0.75rem;
      }
    }
 
